@@ -1,0 +1,254 @@
+*{
+  box-sizing: border-box;
+  position: relative;
+ 
+}
+body{
+  background-color: #eae0d4;
+  text-decoration: none;
+  margin:0;
+  padding: 0;
+  color: #533e25;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  ul {
+    list-style: none;}
+}
+h1{
+  width: 100%;
+  padding-top: 80px;
+  text-align: center;
+  font-style: italic;
+  font-weight: 800;
+  font-size: 50px;
+}
+button{
+  all: unset;
+  cursor: pointer;
+  display: inline-block;
+}
+.image__container img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+/* START AnnouncementBar */
+.AnnouncementBar{
+  width: 100%;
+  height: 30px;
+  background-color: #dfb790;
+  font-size: smaller;
+  font-weight: 300;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+/* END AnnouncementBar */
+
+/* START NavBar */
+.navbar{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 40px;
+  padding-top: 80px;
+}
+
+.navbar__links {
+  display: flex;
+}
+.navbar__item{
+  padding: 8px 15px;
+  background-color: #dec6ae;
+  cursor: pointer;
+}
+
+.navbar__item:hover{
+  background-color: #533e25;
+  color: white;
+  text-decoration: underline;
+  transition: 0.3s;
+
+  .fa-solid.fa-angle-down{
+    color: white;
+  }
+  
+}
+.navbar__logo{
+  display: inline-block;
+	vertical-align: top;
+
+	width: 120px;
+	height: 80px;
+
+	background-image: url('./assets/fallen_grape_logo.png');
+	background-repeat: no-repeat;
+	background-size: contain;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+/* END Navbar*/
+
+/*START Hero*/
+.Hero{
+  width: 100%;
+  aspect-ratio: 2880 / 2184; /* 圖片原始比例 */
+  height: auto; /* 移除固定高度 */
+}
+.Hero .image__container{
+  width: 100%;
+  aspect-ratio: 2880 / 2184; /* 圖片原始比例 */
+  height: auto; /* 移除固定高度 */
+}
+
+.Hero .bg-image{
+  width: 100%;
+  height: 100%;
+
+  background-image: url(./assets/hero_background.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+
+}
+
+.hero__text{
+  color: #d9debb;
+  font-size: 50px;
+  margin-top: 300px;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  
+}
+.hero__button{
+  padding: 20px 50px;
+  background-color: #dfb790;
+  font-weight: 800;
+  margin-top: 375px;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.hero__button:hover{
+  background-color: #533e25;
+  color: white;
+  transition: 0.3s;
+}
+
+.hero__content{
+  width: 100%;
+  padding: 100px 0;
+  background-color: #eae0d4;
+  color: #533e25;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 50px;
+}
+/* END Hero*/
+
+/* START FeaturedCollection */
+.featuredcollection{
+  background-color: #eae0d4;
+  width: 100%;
+  height: auto;
+}
+.featuredcollection__card{
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 400px));
+  justify-content: center;
+  gap: 20px;
+  padding: 40px 0;
+}
+.featuredcollection__card .image__container{
+  aspect-ratio: 533/666;
+  cursor: pointer;
+  overflow: hidden;
+}
+.featuredcollection__card .image__container img{
+  transition: transform 0.3s ease;
+}
+.featuredcollection__card .image__container img:hover{
+  transform: scale(1.1);
+}
+
+.featuredcollection__button{
+  all: unset;
+  cursor: pointer;
+  background-color: #d9a676;
+  padding: 15px 30px;
+  display: block;
+  width: fit-content;
+  margin: 0 auto;
+  transition: transform 0.3s ease;
+}
+.featuredcollection__button:hover{
+  padding: 16px 32px;
+}
+/* END FeaturedCollection */
+
+/* START ProductGrid */
+.productgrid{
+  display: flex;
+  justify-content: space-between;
+  gap:50px;
+  width: 100%;
+  padding-top: 40px;
+}
+.productgrid__button{
+  padding: 15px 35px;
+  background-color: #dec6ae;
+  font-size: 30px;
+  align-self: center;
+  transition: 0.3s ease;
+}
+.productgrid__button:hover{
+  background-color: #533e25;
+  color: #fff;
+}
+
+
+.productgrid__dots{
+  width: 100%;
+  height: auto;
+  text-align: center;
+  padding-top: 20px;
+}
+
+/* END ProductGrid */
+
+/* START ProductCard */
+.productcard{
+  width: 1170px;
+  overflow: hidden;
+  display: flex;
+}
+.productcard__item{
+  width: 350px;
+  margin:0 20px;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+.productcard__item .image__container{
+  width:350px;
+  aspect-ratio: 766/956;
+  overflow: hidden;
+}
+
+.productcard__name{
+  font-size: 30px;
+  font-style: italic;
+  font-weight: 500;
+  margin: 8px 0;
+}
+.productcard__price{
+  font-size: 15px;
+  font-weight: 500;
+  margin: 8px 0;
+}
+/* End ProductCard */
+
+
