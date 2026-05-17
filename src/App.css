@@ -105,6 +105,7 @@ button{
 .productgrid__item{
   display: flex;
   flex-direction: column;
+  cursor: pointer;
 }
 /* END Navbar*/
 

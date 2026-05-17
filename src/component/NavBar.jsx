@@ -13,6 +13,8 @@ function NavBar() {
     { name: '"SISTER" - SKIN CONTACT PINK WINE', img: Product4 },
   ];
   const [isHovered, setIsHovered] = useState(false);
+  const [hoveredName, setHoveredName] = useState(null);
+
   return (
     <>
       <div className="navbar">
@@ -48,13 +50,28 @@ function NavBar() {
           height: `${isHovered ? "fit-content" : "0"}`,
           padding: `${isHovered ? "20px 15px" : "0"}`,
         }}
+        onMouseEnter={() => {
+          setIsHovered(true);
+        }}
+        onMouseLeave={() => {
+          setIsHovered(false);
+        }}
       >
-        {wines.map((wine, index) => (
-          <div key={index} className="productgrid__item">
-            <img src={wine.img} alt={wine.name} />
+        {wines.map((wine) => {
+        const isHoveredName = hoveredName === wine.name
+        return(
+        <>
+        <div key={wine.name} className="productgrid__item"
+          onMouseEnter={()=>setHoveredName(wine.name)}
+          onMouseLeave={()=>setHoveredName(null)}
+          >
+            <div style={{overflow:'hidden'}}>
+            <img src={wine.img} alt={wine.name} style={{transform:`${isHoveredName ? 'scale(1.05)':'scale(1)'}`,transition:'0.3s ease'}}/>
+            </div>
             <p style={{ paddingTop: "5px" }}>{isHovered ? wine.name : ""}</p>
           </div>
-        ))}
+        </>
+        )})}
       </div>
     </>
   );
