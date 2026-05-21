@@ -8,7 +8,6 @@ import ProductGrid from './component/ProductGrid'
 function App() {
   return(
     <>
-      <AnnouncementBar />
       <Hero />
       <FeaturedCollection />
       <ProductGrid />
