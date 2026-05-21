@@ -1,3 +1,4 @@
+import AnnouncementBar from "./AnnouncementBar"
 import NavBar from "./NavBar"
 function Hero(){
     return(
@@ -5,7 +6,14 @@ function Hero(){
             <div className="Hero">
                 <div className="image__container">
                     <div className="bg-image">
-                        <NavBar />
+                        <div style={{
+                            position:'fixed',
+                            zIndex:'100'
+                        }}>
+                            <AnnouncementBar />
+                            <NavBar />
+                        </div>
+                       
                         <p className="hero__text">It's natural</p>
                         <button className="hero__button">SHOP ALL</button>
                     </div>

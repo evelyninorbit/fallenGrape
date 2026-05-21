@@ -55,8 +55,7 @@ button{
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin: 0 40px;
-  padding-top: 80px;
+  padding: 40px;
 }
 
 .navbar__links {
@@ -97,7 +96,7 @@ button{
 }
 .navbar__productgrid{
   background-color: #fff;
-  margin: 0 40px;
+  margin: -40px 40px;
   width: auto;
   display: flex; 
   gap: 10px;

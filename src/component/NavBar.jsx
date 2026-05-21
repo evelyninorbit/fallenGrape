@@ -14,10 +14,27 @@ function NavBar() {
   ];
   const [isHovered, setIsHovered] = useState(false);
   const [hoveredName, setHoveredName] = useState(null);
-
+  const [scrolled, setScrolled] = useState(false)
+  useState(()=>{
+    function handleScroll(){
+      if(window.scrollY > 375){
+        setScrolled(true)
+      }else{
+        setScrolled(false)
+      }
+    }
+    window.addEventListener("scroll", handleScroll)
+    return ()=>{window.removeEventListener("scroll", handleScroll)}
+  },[]
+  )
+  
   return (
     <>
-      <div className="navbar">
+      <div className="navbar" style={{
+        backgroundColor: `${scrolled ? '#eae0d4':''}`,
+        boxShadow: `${scrolled ? '0 2px rgba(0, 0, 0, 0.05)': ""} `,
+        transition: '0.3s ease'
+      }}>
         <div className="navbar__left">
           <ul className="navbar__links">
             <li
