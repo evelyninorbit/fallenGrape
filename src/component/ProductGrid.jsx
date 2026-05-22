@@ -4,7 +4,7 @@ import Product1 from "../assets/Product-1.png"
 import Product2 from "../assets/Product-2.png"
 import Product3 from "../assets/Product-3.png"
 import Product4 from "../assets/Product-4.png"
-import Product1Hovered from '../assets/Product4Hovered.png'
+import Product1Hovered from '../assets/Product1Hovered.png'
 import Product2Hovered from '../assets/Product2Hovered.png'
 import Product3Hovered from '../assets/Product3Hovered.png'
 import Product4Hovered from '../assets/Product4Hovered.png'
